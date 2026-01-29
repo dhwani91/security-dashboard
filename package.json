@@ -7,12 +7,13 @@
     "npm": ">=9.0.0"
   },
   "scripts": {
-    "setup": "node scripts/json-to-sqlite.js",
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "vercel-build": "npm run setup && npm run build"
+    "setup": "node scripts/setup.js",
+    "setup:prod": "node scripts/setup-prod.js || true",
+    "build": "next build",
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",

@@ -147,39 +147,8 @@ Parameters:
 - `sortBy` - Sort field (cveId, severity, cvssScore, packageName, publishedDate)
 - `sortOrder` - Sort direction (asc, desc)
 
-#### POST `/api/vulnerabilities`
-
-Export data to CSV:
-
-```bash
-curl -X POST http://localhost:3000/api/vulnerabilities \
-  -H "Content-Type: application/json" \
-  -d '{"format":"csv"}' \
-  --output vulnerabilities.csv
 ```
 
-##  Deployment
-
-### Deploy to Vercel
-
-```bash
-# Initialize git
-git init
-git add .
-git commit -m "Initial commit"
-
-# Create GitHub repository
-gh repo create security-dashboard --public --source=. --push
-
-# Deploy to Vercel
-npx vercel --prod
-```
-
-The `.db` file will be automatically included in deployment.
-
-### Environment Variables
-
-No environment variables needed! Everything works out of the box.
 
 ## 🎨 Customization
 
@@ -196,14 +165,6 @@ theme: {
   },
 }
 ```
-
-### Add New Filters
-
-Update `lib/types.ts` and `app/api/vulnerabilities/route.ts`
-
-### Customize Charts
-
-Modify components in `components/dashboard/`
 
 ## 📊 Performance
 
