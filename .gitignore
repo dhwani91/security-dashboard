@@ -69,3 +69,4 @@ data/
 data/*.db-wal
 data/*.db-shm
 data/*.db
+data/
